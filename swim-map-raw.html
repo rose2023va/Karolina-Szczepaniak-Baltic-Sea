@@ -2,37 +2,31 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Swim Map (Raw GPX)</title>
+  <title>Raw GPX Track</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
-    body { margin:0; display:flex; font-family: Arial, sans-serif; }
-    #left { width:260px; padding:16px; background:#fff; border-right:1px solid #ddd; height:100vh; box-sizing:border-box; }
-    #map  { flex:1; height:100vh; }
-    .small { font-size: 8px; line-height: 1.25em; }
-    button { margin-right: 6px; }
+    body { margin:0; display:flex; font-family:Arial,sans-serif; }
+    #filters { width:220px; padding:12px; background:#fff; border-right:1px solid #ddd; }
+    #map { flex:1; height:100vh; }
+    button { margin:4px; }
   </style>
 </head>
 <body>
-  <div id="left">
+  <div id="filters">
     <h3>Raw GPX Track</h3>
-    <div id="status" class="small">Loading…</div>
+    <div id="status">Ready.</div>
     <button onclick="showTrack()">Show</button>
-    <button onclick="hideTrack()">Clear</button>
+    <button onclick="clearTrack()">Clear</button>
   </div>
   <div id="map"></div>
 
-  <!-- Libraries -->
+  <!-- Leaflet -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet-gpx@1.7.0/dist/leaflet-gpx.min.js"></script>
+  <!-- Leaflet GPX plugin -->
+  <script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.min.js"></script>
 
-  <!-- App -->
+  <!-- Our JS -->
   <script src="swim-map-raw.js"></script>
-  <script>
-    window.initSwimMapRaw();
-  </script>
 </body>
 </html>
