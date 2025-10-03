@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
-    body { margin:0; display:flex; font-family:Arial,sans-serif; }
-    #filters { width:220px; padding:12px; background:#fff; border-right:1px solid #ddd; }
+    body { margin:0; display:flex; font-family:Arial, sans-serif; }
+    #sidebar { width:220px; padding:12px; background:#fff; border-right:1px solid #ddd; box-sizing:border-box; }
     #map { flex:1; height:100vh; }
     button { margin:4px; }
     .small { font-size:8px; line-height:1.25em; }
   </style>
 </head>
 <body>
-  <div id="filters">
+  <div id="sidebar">
     <h3>Raw GPX Track</h3>
     <div id="status" class="small">Ready.</div>
     <button onclick="showTrack()">Show</button>
@@ -24,8 +24,9 @@
 
   <!-- Leaflet core -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <!-- ✅ Correct Leaflet-GPX plugin URL -->
-  <script src="https://unpkg.com/leaflet-gpx@1.7.0/dist/leaflet-gpx.min.js"></script>
+  <!-- GPX via toGeoJSON + Leaflet-Omnivore (reliable on GitHub Pages) -->
+  <script src="https://unpkg.com/@mapbox/togeojson@0.16.0/dist/togeojson.min.js"></script>
+  <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
 
   <!-- App logic -->
   <script src="swim-map-raw.js"></script>
