@@ -10,23 +10,24 @@
     #filters { width:220px; padding:12px; background:#fff; border-right:1px solid #ddd; }
     #map { flex:1; height:100vh; }
     button { margin:4px; }
+    .small { font-size:8px; line-height:1.25em; }
   </style>
 </head>
 <body>
   <div id="filters">
     <h3>Raw GPX Track</h3>
-    <div id="status">Ready.</div>
+    <div id="status" class="small">Ready.</div>
     <button onclick="showTrack()">Show</button>
     <button onclick="clearTrack()">Clear</button>
   </div>
   <div id="map"></div>
 
-  <!-- Leaflet -->
+  <!-- Leaflet core -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <!-- Leaflet GPX plugin -->
-  <script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.min.js"></script>
+  <!-- ✅ Correct Leaflet-GPX plugin URL -->
+  <script src="https://unpkg.com/leaflet-gpx@1.7.0/dist/leaflet-gpx.min.js"></script>
 
-  <!-- Our JS -->
+  <!-- App logic -->
   <script src="swim-map-raw.js"></script>
 </body>
 </html>
